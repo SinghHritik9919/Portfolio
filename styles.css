@@ -214,33 +214,6 @@ header h1 {
   color: #ccc;
 }
 
-.gallery-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-  transition: background 0.3s ease;
-}
-
-.gallery-btn.prev {
-  left: 10px;
-}
-
-.gallery-btn.next {
-  right: 10px;
-}
-
-.gallery-btn:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: black;
-}
-
 /* Contact Section */
 .contact-container {
   display: flex;
@@ -336,10 +309,37 @@ header h1 {
   }
 }
 
-/* Responsive Footer */
+/* ✅ Footer Fix - Now Centered on Mobile */
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer Responsive Fix */
 @media (max-width: 768px) {
   footer {
-    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer p {
     font-size: 0.9rem;
+    margin: 5px;
+  }
+
+  .footer .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
